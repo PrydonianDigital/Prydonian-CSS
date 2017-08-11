@@ -55,6 +55,8 @@
 	--code-spacing-x: calc(var(--font-regular) * .4);
 	--code-spacing-y: calc(var(--font-regular) * .2);
 
+	--input-range-track-box-shadow: inset 0 1px 0 rgba(0, 0, 0, .05);
+
 	/* Paddings/Margins */
 	--pm-zero: 0;
 	--pm-small: .25rem;
@@ -516,6 +518,99 @@ button:active, [type="submit"]:active, .button:active {
 .big, .big:hover, .big:focus, .big:active {
 	padding: calc(var(--pm-medium) * 4) calc(var(--pm-large) * 4) !important;
 	font-size: var(--font-large) !important;
+}
+input[type="range"] {
+	-webkit-appearance: none;
+	width: 100%;
+	margin: var(-pm-medium) 0;
+	border: 0;
+	padding: var(--pm-zero);
+}
+
+input[type="range"]:focus {
+	outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: .5rem;
+	cursor: pointer;
+	background: var(--color-silver);
+	border-radius: var(--border-radius);
+	border: none;
+	box-shadow: var(--input-range-track-box-shadow);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	border: none;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	background: var(--color-red);
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -1rem;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+	background: var(--color-silver);
+}
+
+input[type="range"]::-moz-range-track {
+	width: 100%;
+	height: .5rem;
+	cursor: pointer;
+	background: var(--color-silver);
+	border-radius: var(--border-radius);
+	border: none;
+	box-shadow: var(--input-range-track-box-shadow);
+}
+
+input[type="range"]::-moz-range-thumb {
+	border: none;
+	height: 2.5rem;
+	width: 2.5rem;
+	border-radius: 50%;
+	background: var(--color-red);
+	cursor: pointer;
+}
+
+input[type="range"]::-ms-track {
+	width: 100%;
+	height: .5rem;
+	cursor: pointer;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+	background: #2f6ea5;
+	border: none;
+	border-radius: var(--border-radius);
+}
+
+input[type="range"]::-ms-fill-upper {
+	background: var(--color-silver);
+	border: none;
+	border-radius: var(--border-radius);
+}
+
+input[type="range"]::-ms-thumb {
+	border: none;
+	height: 1.5rem;
+	width: 1.5rem;
+	border-radius: 50%;
+	background: var(--color-red);
+	cursor: pointer;
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+	background: var(--color-silver);
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+	background: var(--color-silver);
 }
 progress {
 	width: 100%;
