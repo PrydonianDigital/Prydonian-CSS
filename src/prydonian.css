@@ -517,6 +517,33 @@ button:active, [type="submit"]:active, .button:active {
 	padding: calc(var(--pm-medium) * 4) calc(var(--pm-large) * 4) !important;
 	font-size: var(--font-large) !important;
 }
+progress {
+	width: 100%;
+	height: var(--font-regular);
+	margin: 0 auto;
+	display: block;
+	-webkit-appearance: none;
+	border: none;
+	overflow: hidden;
+	border-radius: var(--border-radius-big);
+	background: var(--color-silver);
+}
+progress::-webkit-progress-bar {
+	background: var(--color-silver);
+	border-radius: var(--border-radius-big);
+}
+progress::-webkit-progress-value {
+	border-radius: var(--border-radius-big);
+	background: var(--color-green);
+}
+progress::-moz-progress-bar {
+	background: var(--color-green);
+	border-radius: var(--border-radius-big);
+}
+.info::-moz-progress-bar {
+	background-color: var(--color-green);
+	border-radius: var(--border-radius-big);
+}
 table {
 	width: 100%;
 	border-collapse: collapse;
