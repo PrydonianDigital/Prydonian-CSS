@@ -315,6 +315,12 @@ button:active, [type="submit"]:active {
 	border-radius: var(--border-radius);
 	margin-bottom: var(--pm-large);
 }
+.message a {
+	color: var(--color-dark);
+}
+.message a:hover, .message a:active, .message a:visited {
+	color: var(--color-black);
+}
 .badge {
 	background: var(--color-silver);
 	padding: var(--pm-zero) var(--pm-large);
@@ -427,6 +433,35 @@ button:active, [type="submit"]:active {
 .hollow:hover, .hollow:active, hollow:focus {
 	background: transparent !important;
 	box-shadow: var(--button-shadow-hollow);
+}
+.message.primary a,
+.message.secondary a,
+.message.info a,
+.message.alert a,
+.message.attention a,
+.message.dark a {
+	color: var(--color-white);
+}
+.message.primary a:hover,
+.message.primary a:active,
+.message.primary a:visited,
+.message.secondary a:hover,
+.message.secondary a:active,
+.message.secondary a:visited,
+.message.info a:hover,
+.message.info a:active,
+.message.info a:visited,
+.message.alert a:hover,
+.message.alert a:active,
+.message.alert a:visited,
+.message.attention a:hover,
+.message.attention a:active,
+.message.attention a:visited,
+.message.dark a:hover,
+.message.dark a:active,
+.message.dark a:visited
+{
+	color: var(--color-silver);
 }
 .subtle {
 	color: var(--color-grey);
