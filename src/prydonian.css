@@ -479,3 +479,46 @@ button:active, [type="submit"]:active {
 	padding: calc(var(--pm-medium) * 4) calc(var(--pm-large) * 4) !important;
 	font-size: var(--font-large) !important;
 }
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: var(--pm-large);
+}
+table caption {
+	caption-side: bottom;
+	font-size: var(--font-small);
+	color: var(--text-grey);
+	text-align: center;
+	padding-top: var(--pm-small);
+}
+
+table th {
+	text-align: left;
+	background: var(--color-silver);
+	border-bottom: 1px solid var(--color-grey);
+	padding: var(--pm-medium);
+}
+
+table td {
+	border-bottom: 1px solid var(--color-grey);
+	padding: var(--pm-medium);
+}
+
+table.stripe tr:nth-child(odd) td {
+	background-color: var(--color-silver);
+}
+
+table.border {
+	border: 1px solid var(--color-grey);
+}
+
+table.border td {
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--color-grey);
+}
+
+table.hover tbody tr:hover td {
+	color: var(--color-black);
+	background-color: var(--color-silver);
+}
