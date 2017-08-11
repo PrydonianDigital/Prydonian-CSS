@@ -1,6 +1,6 @@
 .container {
 	width: 100%;
-	max-width: 62.5rem;
+	max-width: 80rem;
 	padding: 0 var(--pm-xlarge);
 	margin: 0 auto;
 	display: grid;
@@ -15,6 +15,7 @@ nav {
 }
 nav a {
 	display: block;
+	margin-bottom: var(--pm-large);
 }
 .main {
 	grid-column: auto / span 10;
@@ -26,4 +27,9 @@ section {
 }
 .space {
 	padding-bottom: 0.5rem;
+}
+@media screen and (max-width: 50rem) {
+	nav, .main {
+		grid-column: auto / span 12;
+	}
 }

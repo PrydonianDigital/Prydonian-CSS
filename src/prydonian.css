@@ -304,6 +304,14 @@ button, [type="submit"], .button {
 	text-decoration: none;
 	transition: box-shadow, .25s ease-in-out;
 }
+a.button.primary,
+a.button.secondary,
+a.button.info,
+a.button.alert,
+a.button.attention,
+a.button.dark {
+	color: var(--color-white);
+}
 button:hover, [type="submit"]:hover, .button:hover {
 	background: var(--color-silver);
 	box-shadow: var(--button-shadow-hover);
