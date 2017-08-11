@@ -282,7 +282,7 @@ select {
 input:focus, select:focus, textarea:focus {
 	outline: 1px solid var(--color-teal);
 }
-button, [type="submit"] {
+button, [type="submit"], .button {
 	width: auto;
 	font-family: var(--button-font);
 	font-size: var(--button-size);
@@ -295,14 +295,14 @@ button, [type="submit"] {
 	box-shadow: var(--button-shadow);
 	color: var(--color-black);
 	margin: 0 0 var(--pm-small) 0;
-	transition: .1s box-shadow, .1s background-color, .1s color;
+	transition: box-shadow, .25s ease-in-out;
 }
-button:hover, [type="submit"]:hover {
+button:hover, [type="submit"]:hover, .button:hover {
 	background: var(--color-silver);
 	box-shadow: var(--button-shadow-hover);
 	color: var(--color-black);
 }
-button:active, [type="submit"]:active {
+button:active, [type="submit"]:active, .button:active {
 	font-size: var(--font-regular);
 	background: var(--color-silver);
 	padding: var(--pm-medium) var(--pm-large);
