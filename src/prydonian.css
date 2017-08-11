@@ -195,7 +195,7 @@ blockquote cite {
 code {
 	font-family: var(--font-monospace);
 	font-size: var(--font-mono);
-	color: var(--color-dark);
+	color: var(--color-black);
 	background: var(--color-silver);
 	display: inline-block;
 	border-radius: var(--border-radius);
@@ -206,7 +206,7 @@ pre {
 	overflow-y: auto;
 	font-family: var(--font-monospace);
 	font-size: var(--font-mono);
-	color: var(--color-dark);
+	color: var(--color-black);
 	background-color: var(--color-silver);
 	border-radius: var(--border-radius);
 	padding: var(--pm-large);
