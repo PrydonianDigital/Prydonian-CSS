@@ -367,6 +367,38 @@ button:active, [type="submit"]:active {
 	color: var(--color-white);
 	box-shadow: var(--button-shadow-active);
 }
+.hollow {
+	background: transparent !important;
+	border: 1px solid var(--color-silver);
+}
+.primary.hollow {
+	border: 1px solid var(--color-green);
+	color: var(--color-green);
+}
+.secondary.hollow {
+	border: 1px solid var(--color-aqua);
+	color: var(--color-aqua);
+}
+.info.hollow {
+	border: 1px solid var(--color-teal);
+	color: var(--color-teal);
+}
+.alert.hollow {
+	border: 1px solid var(--color-red);
+	color: var(--color-red);
+}
+.attention.hollow {
+	border: 1px solid var(--color-orange);
+	color: var(--color-orange);
+}
+.dark.hollow {
+	border: 1px solid var(--color-dark);
+	color: var(--color-dark);
+}
+.hollow:hover, .hollow:active, hollow:focus {
+	background: transparent !important;
+	box-shadow: var(--button-shadow);
+}
 .subtle {
 	color: var(--color-grey);
 	font-weight: var(--weight-book);
