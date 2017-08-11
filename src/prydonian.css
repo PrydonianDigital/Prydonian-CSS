@@ -82,7 +82,10 @@ body {
 	line-height: var(--line-height);
 	font-weight: var(--weight-normal);
 }
-
+i.fa {
+	font-size: var(--font-regular) !important;
+	vertical-align: baseline;
+}
 h1, h2, h3 {
 	font-weight: var(--weight-bold);
 }
@@ -479,7 +482,7 @@ button:active, [type="submit"]:active, .button:active {
 	font-weight: var(--button-weight);
 	background: var(--color-silver);
 	border: none;
-	padding: var(--pm-medium) var(--pm-large);
+	padding: var(--pm-medium) var(--pm-large) 0 var(--pm-large);
 	border-radius: var(--border-radius);
 	color: var(--color-black);
 	margin: 0 0 var(--pm-small) 0;
