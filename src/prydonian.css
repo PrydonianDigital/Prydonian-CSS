@@ -289,6 +289,7 @@ input:focus, select:focus, textarea:focus {
 }
 button, [type="submit"], .button {
 	width: auto;
+	display: inline-block;
 	font-family: var(--button-font);
 	font-size: var(--button-size);
 	line-height: 1;
@@ -300,6 +301,7 @@ button, [type="submit"], .button {
 	box-shadow: var(--button-shadow);
 	color: var(--color-black);
 	margin: 0 0 var(--pm-small) 0;
+	text-decoration: none;
 	transition: box-shadow, .25s ease-in-out;
 }
 button:hover, [type="submit"]:hover, .button:hover {

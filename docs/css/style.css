@@ -1,0 +1,29 @@
+.container {
+	width: 100%;
+	max-width: 62.5rem;
+	padding: 0 var(--pm-xlarge);
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+	grid-gap: 1rem;
+}
+nav {
+	grid-column: auto / span 2;
+	padding: var(--pm-large);
+	border-right: 1px solid var(--color-grey);
+	text-align: right;
+}
+nav a {
+	display: block;
+}
+.main {
+	grid-column: auto / span 10;
+}
+section {
+	padding: 0 0 var(--pm-xxlarge) 0;
+	margin: 0 0 var(--pm-xxlarge) 0;
+	border-bottom: 1px solid var(--color-grey);
+}
+.space {
+	padding-bottom: 0.5rem;
+}
