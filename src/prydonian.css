@@ -81,12 +81,7 @@ body {
 	line-height: var(--line-height);
 	font-weight: var(--weight-normal);
 }
-.container {
-	width: 100%;
-	max-width: 62.5rem;
-	padding: 0 var(--pm-xlarge);
-	margin: 0 auto;
-}
+
 h1, h2, h3 {
 	font-weight: var(--weight-bold);
 }
