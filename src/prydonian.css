@@ -85,6 +85,10 @@ body {
 	line-height: var(--line-height);
 	font-weight: var(--weight-normal);
 }
+body.invert {
+	color: var(--color-white);
+	background: var(--color-black);
+}
 i.fa {
 	font-size: var(--font-regular) !important;
 	vertical-align: baseline;
@@ -393,10 +397,11 @@ button:active, [type="submit"]:active, .button:active {
 }
 .badge {
 	background: var(--color-silver);
-	padding: var(--pm-zero) var(--pm-large);
+	padding: var(--pm-zero) calc(var(--pm-medium) * 1.75);
 	border-radius: var(--border-radius-big);
 	display: inline-block;
 	vertical-align: baseline;
+	line-height: 1;
 }
 .primary {
 	background-color: var(--color-green);
