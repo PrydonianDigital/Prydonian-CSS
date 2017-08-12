@@ -47,10 +47,11 @@
 	--button-font: inherit;
 	--button-weight: inherit;
 	--button-size: var(--font-regular);
-	--button-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), inset 0 -1px 0 rgba(0, 0, 0, .1);
+	--progress-shadow: 1px 0 1px rgba(0,0,0,0.1);
+	--button-shadow: inset 0 2px 0 rgba(255, 255, 255, .1), inset 0 -2px 0 rgba(0, 0, 0, .1);
 	--button-shadow-hover: inset 0 5rem 5rem rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .25);
-	--button-shadow-active: inset 0 1px 5rem rgba(0, 0, 0, .1), inset 0 1px 0 rgba(0, 0, 0, .1);
-	--button-shadow-hollow: inset 0 0 0.1rem rgba(0, 0, 0, .5), inset 0 0 0 rgba(0, 0, 0, .1);
+	--button-shadow-active: inset 0 2px 5rem rgba(0, 0, 0, .1), inset 0 2px 0 rgba(0, 0, 0, .1);
+	--button-shadow-hollow: inset 0 0 0.15rem rgba(0, 0, 0, .5), inset 0 0 0.15rem rgba(0, 0, 0, .1);
 
 	--code-spacing-x: calc(var(--font-regular) * .4);
 	--code-spacing-y: calc(var(--font-regular) * .2);
@@ -244,6 +245,60 @@ fieldset legend {
 .form-fields {
 	margin: 0 0 var(--pm-medium) 0;
 }
+.progress {
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	border: none;
+	overflow: hidden;
+	border-radius: var(--border-radius-big);
+	background: var(--color-silver);
+}
+.progress-value {
+	background-color: var(--color-teal);
+	color: var(--color-white);
+	border-radius: var(--border-radius-big);
+	padding: var(--pm-small);
+	text-align: center;
+	font-size: var(--font-small);
+	box-shadow: var(--progress-shadow);
+}
+.progress-value.loading {
+	background-color: var(--color-teal) !important;
+	background: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+	background-size: 50px 50px;
+	animation: big 2.5s linear infinite;
+}
+.progress-value.loading.primary {
+	background-color: var(--color-green) !important;
+	background: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+	background-size: 50px 50px;
+	animation: big 2.5s linear infinite;
+}
+.progress-value.loading.secondary {
+	background-color: var(--color-blue) !important;
+	background: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+	background-size: 50px 50px;
+	animation: big 2.5s linear infinite;
+}
+.progress-value.loading.alert {
+	background-color: var(--color-red) !important;
+	background: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+	background-size: 50px 50px;
+	animation: big 2.5s linear infinite;
+}
+.progress-value.loading.attention {
+	background-color: var(--color-orange) !important;
+	background: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+	background-size: 50px 50px;
+	animation: big 2.5s linear infinite;
+}
+.progress-value.loading.dark {
+	background-color: var(--color-dark) !important;
+	background: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+	background-size: 50px 50px;
+	animation: big 2.5s linear infinite;
+}
 label {
 	display: inline-block;
 	font-size: var(--font-regular);
@@ -344,80 +399,80 @@ button:active, [type="submit"]:active, .button:active {
 	vertical-align: baseline;
 }
 .primary {
-	background: var(--color-green);
+	background-color: var(--color-green);
 	color: var(--color-white);
 }
 .primary:hover {
-	background: var(--color-green);
+	background-color: var(--color-green);
 	color: var(--color-white);
 }
 .primary:active {
-	background: var(--color-green);
+	background-color: var(--color-green);
 	color: var(--color-white);
 }
 .secondary {
-	background: var(--color-aqua);
+	background-color: var(--color-aqua);
 	color: var(--color-white);
 }
 .secondary:hover {
-	background: var(--color-aqua);
+	background-color: var(--color-aqua);
 	color: var(--color-white);
 }
 .secondary:active {
-	background: var(--color-aqua);
+	background-color: var(--color-aqua);
 	color: var(--color-white);
 }
 .info {
-	background: var(--color-teal);
+	background-color: var(--color-teal);
 	color: var(--color-white);
 }
 .info:hover {
-	background: var(--color-teal);
+	background-color: var(--color-teal);
 	color: var(--color-white);
 }
 .info:active {
-	background: var(--color-teal);
+	background-color: var(--color-teal);
 	color: var(--color-white);
 }
 .alert {
-	background: var(--color-red);
+	background-color: var(--color-red);
 	color: var(--color-white);
 }
 .alert:hover {
-	background: var(--color-red);
+	background-color: var(--color-red);
 	color: var(--color-white);
 }
 .alert:active {
-	background: var(--color-red);
+	background-color: var(--color-red);
 	color: var(--color-white);
 }
 .attention {
-	background: var(--color-orange);
+	background-color: var(--color-orange);
 	color: var(--color-white);
 }
 .attention:hover {
-	background: var(--color-orange);
+	background-color: var(--color-orange);
 	color: var(--color-white);
 }
 .attention:active {
-	background: var(--color-orange);
+	background-color: var(--color-orange);
 	color: var(--color-white);
 }
 .dark {
-	background: var(--color-dark);
+	background-color: var(--color-dark);
 	color: var(--color-white);
 }
 .dark:hover {
-	background: var(--color-dark);
+	background-color: var(--color-dark);
 	color: var(--color-white);
 }
 .dark:active {
-	background: var(--color-dark);
+	background-color: var(--color-dark);
 	color: var(--color-white);
 	box-shadow: var(--button-shadow-active);
 }
 .hollow {
-	background: transparent !important;
+	background-color: transparent !important;
 	border: 1px solid var(--color-silver);
 	box-shadow: none;
 }
@@ -499,20 +554,20 @@ button:active, [type="submit"]:active, .button:active {
 	color: var(--color-black);
 	margin: 0 0 var(--pm-small) 0;
 }
-.group button, .group [type="submit"], .group input, .group span, .group select {
+.group button, .group [type="submit"], .group input, .group span, .group select, .group .button {
 	border-radius: var(--pm-zero);
 	display: block;
 }
 .group input {
 	border-left-width: 0;
 }
-.group input:first-child {
+.group input:first-child, .group .button:first-child {
 	border-left-width: 1px;
 }
-.group button:first-child, .group [type="submit"]:first-child, .group input:first-child, .group select:first-child, .group span:first-child {
+.group button:first-child, .group [type="submit"]:first-child, .group input:first-child, .group select:first-child, .group span:first-child, .group .button:first-child {
 	border-radius: var(--border-radius) 0 0 var(--border-radius);
 }
-.group button:last-child, .group [type="submit"]:last-child, .group input:last-child, .group select:last-child, .group span:last-child {
+.group button:last-child, .group [type="submit"]:last-child, .group input:last-child, .group select:last-child, .group span:last-child, .group .button:last-child {
 	border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 .full {
@@ -622,29 +677,7 @@ input[type="range"]:focus::-ms-fill-lower {
 input[type="range"]:focus::-ms-fill-upper {
 	background: var(--color-silver);
 }
-progress {
-	width: 100%;
-	height: var(--font-regular);
-	margin: 0 auto;
-	display: block;
-	-webkit-appearance: none;
-	border: none;
-	overflow: hidden;
-	border-radius: var(--border-radius-big);
-	background: var(--color-silver);
-}
-progress::-webkit-progress-bar {
-	background: var(--color-silver);
-	border-radius: var(--border-radius-big);
-}
-progress::-webkit-progress-value {
-	border-radius: var(--border-radius-big);
-	background: var(--color-green);
-}
-progress::-moz-progress-bar {
-	background: var(--color-green);
-	border-radius: var(--border-radius-big);
-}
+
 .info::-moz-progress-bar {
 	background-color: var(--color-green);
 	border-radius: var(--border-radius-big);
@@ -691,4 +724,43 @@ table.border td {
 table.hover tbody tr:hover td {
 	color: var(--color-black);
 	background-color: var(--color-silver);
+}
+@-moz-keyframes big {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@-webkit-keyframes big {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@-ms-keyframes big {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes big {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 50px 50px;
+  }
 }

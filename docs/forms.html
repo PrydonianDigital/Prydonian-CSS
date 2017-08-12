@@ -18,7 +18,7 @@
 		<a href="tables.html" class="button">Tables</a>
 	</nav>
 	<div class="main">
-		<section>
+		<section class="header">
 			<h1>Prydonian CSS</h1>
 		</section>		<section>
 			<h2 class="subtle">Forms</h2>
@@ -70,7 +70,39 @@
 			</p>
 			<p>Progress
 				<div class="space">
-					<progress max="100" value="75"></progress>
+					<div class="progress">
+						<div class="progress-value" style="width:75%;">75%</div>
+					</div>
+				</div>
+				<div class="space">
+					<div class="progress">
+						<div class="progress-value alert" style="width:50%;">50% (alert)</div>
+					</div>
+				</div>
+				<div class="space">
+					<div class="progress">
+						<div class="progress-value dark" style="width:20%;">20% (dark)</div>
+					</div>
+				</div>
+				<div class="space">
+					<div class="progress">
+						<div class="progress-value loading" style="width:100%;">loading</div>
+					</div>
+				</div>
+				<div class="space">
+					<div class="progress">
+						<div class="progress-value loading dark" style="width:100%;">loading</div>
+					</div>
+				</div>
+				<div class="space">
+					<div class="progress">
+						<div class="progress-value loading attention medium" style="width:100%;">loading (medium)</div>
+					</div>
+				</div>
+				<div class="space">
+					<div class="progress">
+						<div class="progress-value loading primary big" style="width:100%;">loading (big)</div>
+					</div>
 				</div>
 			</p>
 			<p>Range
