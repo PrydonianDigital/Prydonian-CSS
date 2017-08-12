@@ -273,37 +273,38 @@ fieldset legend {
 	background-color: var(--color-teal) !important;
 	background: var(--progress-loading);
 	background-size: 50px 50px;
-	animation: big 2.5s linear infinite;
+	cursor: wait;
+	animation: loading 2.5s linear infinite;
 }
 .progress-value.loading.primary {
 	background-color: var(--color-green) !important;
 	background: var(--progress-loading);
 	background-size: 50px 50px;
-	animation: big 2.5s linear infinite;
+	animation: loading 2.5s linear infinite;
 }
 .progress-value.loading.secondary {
 	background-color: var(--color-blue) !important;
 	background: var(--progress-loading);
 	background-size: 50px 50px;
-	animation: big 2.5s linear infinite;
+	animation: loading 2.5s linear infinite;
 }
 .progress-value.loading.alert {
 	background-color: var(--color-red) !important;
 	background: var(--progress-loading);
 	background-size: 50px 50px;
-	animation: big 2.5s linear infinite;
+	animation: loading 2.5s linear infinite;
 }
 .progress-value.loading.attention {
 	background-color: var(--color-orange) !important;
 	background: var(--progress-loading);
 	background-size: 50px 50px;
-	animation: big 2.5s linear infinite;
+	animation: loading 2.5s linear infinite;
 }
 .progress-value.loading.dark {
 	background-color: var(--color-dark) !important;
 	background: var(--progress-loading);
 	background-size: 50px 50px;
-	animation: big 2.5s linear infinite;
+	animation: loading 2.5s linear infinite;
 }
 [class*='loader'] {
 	position: relative;
@@ -330,8 +331,8 @@ fieldset legend {
 	height: 4em;
 	border-radius: 50%;
 	background-color: var(--color-teal);
-	-webkit-animation: movingCircles 2s infinite ease-in-out;
-	animation: movingCircles 2s infinite ease-in-out;
+	-webkit-animation: loader 2s infinite ease-in-out;
+	animation: loader 2s infinite ease-in-out;
 	box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 .loader:after {
@@ -633,6 +634,9 @@ button:active, [type="submit"]:active, .button:active {
 	padding: calc(var(--pm-medium) * 4) calc(var(--pm-large) * 4) !important;
 	font-size: var(--font-large) !important;
 }
+.loading.big {
+	border-radius: var(--border-radius-big);
+}
 input[type="range"] {
 	-webkit-appearance: none;
 	width: 100%;
@@ -774,88 +778,84 @@ table.hover tbody tr:hover td {
 	color: var(--color-black);
 	background-color: var(--color-silver);
 }
-@-moz-keyframes big {
+@-moz-keyframes loading {
 	0% {
 		background-position: 0 0;
 	}
-
 	100% {
 		background-position: 50px 50px;
 	}
 }
 
-@-webkit-keyframes big {
+@-webkit-keyframes loading {
 	0% {
 		background-position: 0 0;
 	}
-
 	100% {
 		background-position: 50px 50px;
 	}
 }
 
-@-ms-keyframes big {
+@-ms-keyframes loading {
 	0% {
 		background-position: 0 0;
 	}
-
 	100% {
 		background-position: 50px 50px;
 	}
 }
 
-@keyframes big {
+@keyframes loading {
 	0% {
 		background-position: 0 0;
 	}
-
 	100% {
 		background-position: 50px 50px;
 	}
 }
 
-@-webkit-keyframes movingCircles {
+@-webkit-keyframes loader {
 	0% {
 		z-index: 1;
 		-webkit-transform: translate(0, 0);
-						transform: translate(0, 0);
+		transform: translate(0, 0);
 	}
 	50% {
 		z-index: 1;
 		-webkit-transform: translate(120%, 0);
-						transform: translate(120%, 0);
+		transform: translate(120%, 0);
 	}
 	50.1% {
 		z-index: 0;
 		-webkit-transform: translate(120%, 0);
-						transform: translate(120%, 0);
+		transform: translate(120%, 0);
 	}
 	100% {
 		z-index: 0;
 		-webkit-transform: translate(0, 0);
-						transform: translate(0, 0);
+		transform: translate(0, 0);
 	}
 }
 
-@keyframes movingCircles {
+@keyframes loader {
 	0% {
 		z-index: 1;
 		-webkit-transform: translate(0, 0);
-						transform: translate(0, 0);
+		transform: translate(0, 0);
 	}
 	50% {
 		z-index: 1;
 		-webkit-transform: translate(120%, 0);
-						transform: translate(120%, 0);
+		transform: translate(120%, 0);
 	}
 	50.1% {
 		z-index: 0;
 		-webkit-transform: translate(120%, 0);
-						transform: translate(120%, 0);
+		transform: translate(120%, 0);
 	}
 	100% {
 		z-index: 0;
 		-webkit-transform: translate(0, 0);
-						transform: translate(0, 0);
+		transform: translate(0, 0);
 	}
 }
