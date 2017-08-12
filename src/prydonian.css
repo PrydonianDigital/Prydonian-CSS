@@ -51,7 +51,8 @@
 	--button-shadow: inset 0 2px 0 rgba(255, 255, 255, .1), inset 0 -2px 0 rgba(0, 0, 0, .1);
 	--button-shadow-hover: inset 0 5rem 5rem rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .25);
 	--button-shadow-active: inset 0 2px 5rem rgba(0, 0, 0, .1), inset 0 2px 0 rgba(0, 0, 0, .1);
-	--button-shadow-hollow: inset 0 0 0.15rem rgba(0, 0, 0, .5), inset 0 0 0.15rem rgba(0, 0, 0, .1);
+	--button-shadow-hollow: inset 0 0 1px rgba(0, 0, 0, .75);
+	--button-shadow-hollow-invert: inset 0 0 2px rgba(255,255,255, .75), inset 0 0 2px rgba(255,255,255, .5);
 
 	--code-spacing-x: calc(var(--font-regular) * .4);
 	--code-spacing-y: calc(var(--font-regular) * .2);
@@ -481,6 +482,9 @@ button:active, [type="submit"]:active, .button:active {
 	border: 1px solid var(--color-silver);
 	box-shadow: none;
 }
+.invert .hollow {
+	color: var(--color-silver);
+}
 .primary.hollow {
 	border: 1px solid var(--color-green);
 	color: var(--color-green);
@@ -505,9 +509,13 @@ button:active, [type="submit"]:active, .button:active {
 	border: 1px solid var(--color-dark);
 	color: var(--color-dark);
 }
-.hollow:hover, .hollow:active, hollow:focus {
+.hollow:hover, .hollow:active, .hollow:focus {
 	background: transparent !important;
 	box-shadow: var(--button-shadow-hollow);
+}
+.invert .hollow:hover, .invert .hollow:active, .invert .hollow:focus {
+	background: transparent !important;
+	box-shadow: var(--button-shadow-hollow-invert);
 }
 .message.primary a,
 .message.secondary a,
