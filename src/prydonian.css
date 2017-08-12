@@ -53,6 +53,7 @@
 	--button-shadow-active: inset 0 2px 5rem rgba(0, 0, 0, .1), inset 0 2px 0 rgba(0, 0, 0, .1);
 	--button-shadow-hollow: inset 0 0 1px rgba(0, 0, 0, .75);
 	--button-shadow-hollow-invert: inset 0 0 2px rgba(255,255,255, .75), inset 0 0 2px rgba(255,255,255, .5);
+	--progress-loading: linear-gradient(-45deg, rgba(255,255,255,0.25) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0.25) 75%, transparent 75%, transparent);
 
 	--code-spacing-x: calc(var(--font-regular) * .4);
 	--code-spacing-y: calc(var(--font-regular) * .2);
@@ -270,39 +271,74 @@ fieldset legend {
 }
 .progress-value.loading {
 	background-color: var(--color-teal) !important;
-	background: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+	background: var(--progress-loading);
 	background-size: 50px 50px;
 	animation: big 2.5s linear infinite;
 }
 .progress-value.loading.primary {
 	background-color: var(--color-green) !important;
-	background: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+	background: var(--progress-loading);
 	background-size: 50px 50px;
 	animation: big 2.5s linear infinite;
 }
 .progress-value.loading.secondary {
 	background-color: var(--color-blue) !important;
-	background: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+	background: var(--progress-loading);
 	background-size: 50px 50px;
 	animation: big 2.5s linear infinite;
 }
 .progress-value.loading.alert {
 	background-color: var(--color-red) !important;
-	background: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+	background: var(--progress-loading);
 	background-size: 50px 50px;
 	animation: big 2.5s linear infinite;
 }
 .progress-value.loading.attention {
 	background-color: var(--color-orange) !important;
-	background: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+	background: var(--progress-loading);
 	background-size: 50px 50px;
 	animation: big 2.5s linear infinite;
 }
 .progress-value.loading.dark {
 	background-color: var(--color-dark) !important;
-	background: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+	background: var(--progress-loading);
 	background-size: 50px 50px;
 	animation: big 2.5s linear infinite;
+}
+[class*='loader'] {
+	position: relative;
+	top: 40%;
+	display: inline-block;
+	margin: 0 auto;
+	cursor: wait;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.loader {
+	position: relative;
+	display: inline-block;
+	margin: 0 auto;
+	width: 6em;
+	height: 4em;
+}
+.loader:before, .loader:after {
+	content: '';
+	left: 0;
+	position: absolute;
+	width: 4em;
+	height: 4em;
+	border-radius: 50%;
+	background-color: var(--color-teal);
+	-webkit-animation: movingCircles 2s infinite ease-in-out;
+	animation: movingCircles 2s infinite ease-in-out;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+.loader:after {
+	-webkit-animation-delay: -1s;
+	animation-delay: -1s;
+	background-color: var(--color-green);
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 label {
 	display: inline-block;
@@ -739,41 +775,87 @@ table.hover tbody tr:hover td {
 	background-color: var(--color-silver);
 }
 @-moz-keyframes big {
-  0% {
-    background-position: 0 0;
-  }
+	0% {
+		background-position: 0 0;
+	}
 
-  100% {
-    background-position: 50px 50px;
-  }
+	100% {
+		background-position: 50px 50px;
+	}
 }
 
 @-webkit-keyframes big {
-  0% {
-    background-position: 0 0;
-  }
+	0% {
+		background-position: 0 0;
+	}
 
-  100% {
-    background-position: 50px 50px;
-  }
+	100% {
+		background-position: 50px 50px;
+	}
 }
 
 @-ms-keyframes big {
-  0% {
-    background-position: 0 0;
-  }
+	0% {
+		background-position: 0 0;
+	}
 
-  100% {
-    background-position: 50px 50px;
-  }
+	100% {
+		background-position: 50px 50px;
+	}
 }
 
 @keyframes big {
-  0% {
-    background-position: 0 0;
-  }
+	0% {
+		background-position: 0 0;
+	}
 
-  100% {
-    background-position: 50px 50px;
-  }
+	100% {
+		background-position: 50px 50px;
+	}
+}
+
+@-webkit-keyframes movingCircles {
+	0% {
+		z-index: 1;
+		-webkit-transform: translate(0, 0);
+						transform: translate(0, 0);
+	}
+	50% {
+		z-index: 1;
+		-webkit-transform: translate(120%, 0);
+						transform: translate(120%, 0);
+	}
+	50.1% {
+		z-index: 0;
+		-webkit-transform: translate(120%, 0);
+						transform: translate(120%, 0);
+	}
+	100% {
+		z-index: 0;
+		-webkit-transform: translate(0, 0);
+						transform: translate(0, 0);
+	}
+}
+
+@keyframes movingCircles {
+	0% {
+		z-index: 1;
+		-webkit-transform: translate(0, 0);
+						transform: translate(0, 0);
+	}
+	50% {
+		z-index: 1;
+		-webkit-transform: translate(120%, 0);
+						transform: translate(120%, 0);
+	}
+	50.1% {
+		z-index: 0;
+		-webkit-transform: translate(120%, 0);
+						transform: translate(120%, 0);
+	}
+	100% {
+		z-index: 0;
+		-webkit-transform: translate(0, 0);
+						transform: translate(0, 0);
+	}
 }
