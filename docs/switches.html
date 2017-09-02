@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Prydonian CSS starter kit</title>
+<link rel="stylesheet" href="../src/normalise.css" />
+<link rel="stylesheet" href="../src/prydonian.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script src="https://use.fontawesome.com/bfa003177d.js"></script>
+</head>
+<body>
+
+	<nav>
+		<ul class="menu">
+			<li><a href="index.html">Start</a></li>
+			<li><a href="forms.html">Forms</a></li>
+			<li><a href="buttons.html">Buttons</a></li>
+			<li class="active"><a href="switches.html">Switches</a></li>
+			<li><a href="messages.html">Messages</a></li>
+			<li><a href="badges.html">Badges</a></li>
+			<li><a href="tables.html">Tables</a></li>
+			<li><a href="loaders.html">Loaders</a></li>
+			<li><a href="menus.html">Menus</a>
+		</ul>
+	</nav>
+<div class="container">
+	<div class="main">
+		<section class="header">
+			<h1>Prydonian CSS</h1>
+			<p><a class="button dark invertMe" href="#" id="invert">Invert</a></p>
+		</section>
+		<section>
+			<h2 class="subtle">Switches</h2>
+			<p>
+				<span class="switch">
+					<input type="checkbox" class="switch" id="switch1">
+					<label for="switch1"> Switch</label>
+				</span>
+			</p>
+			<p>
+				<span class="switch">
+					<input type="checkbox" class="switch primary" id="switch2">
+					<label for="switch2"> Primary Switch</label>
+				</span>
+			</p>
+			<p>
+				<span class="switch">
+					<input type="checkbox" class="switch secondary" id="switch3">
+					<label for="switch3"> Secondary Switch</label>
+				</span>
+			</p>
+			<p>
+				<span class="switch">
+					<input type="checkbox" class="switch info" id="switch4">
+					<label for="switch4"> Info Switch</label>
+				</span>
+			</p>
+			<p>
+				<span class="switch">
+					<input type="checkbox" class="switch alert" id="switch5">
+					<label for="switch5"> Alert Switch</label>
+				</span>
+			</p>
+			<p>
+				<span class="switch">
+					<input type="checkbox" class="switch attention" id="switch6">
+					<label for="switch6"> Attention Switch</label>
+				</span>
+			</p>
+			<p>
+				<span class="switch">
+					<input type="checkbox" class="switch dark" id="switch7">
+					<label for="switch7"> Dark Switch</label>
+				</span>
+			</p>
+		</section>
+
+	</div>
+</div>
+<script src="js/zepto.js"></script>
+<script>
+Zepto(function($){
+	$(document).on('click', '.invertMe', function(e){
+		e.preventDefault();
+		$('body').toggleClass('invert');
+	});
+});
+</script>
+</body>
+</html>
