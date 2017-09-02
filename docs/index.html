@@ -10,12 +10,17 @@
 <body>
 
 	<nav>
-		<a href="index.html" class="button primary">Start</a>
-		<a href="forms.html" class="button">Forms</a>
-		<a href="messages.html" class="button">Messages</a>
-		<a href="badges.html" class="button">Badges</a>
-		<a href="tables.html" class="button">Tables</a>
-		<a href="loaders.html" class="button">Loaders</a>
+		<ul class="menu">
+			<li class="active"><a href="index.html">Start</a></li>
+			<li><a href="forms.html">Forms</a></li>
+			<li><a href="buttons.html">Buttons</a></li>
+			<li><a href="switches.html">Switches</a></li>
+			<li><a href="messages.html">Messages</a></li>
+			<li><a href="badges.html">Badges</a></li>
+			<li><a href="tables.html">Tables</a></li>
+			<li><a href="loaders.html">Loaders</a></li>
+			<li><a href="menus.html">Menus</a>
+		</ul>
 	</nav>
 
 <div class="container">
@@ -25,6 +30,7 @@
 		</section>
 		<section>
 			<p>Add a class of "invert" to the body to make the background black and the font colour white.</p>
+			<p><a class="button dark invertMe" href="#" id="invert">Try it</a></p>
 		</section>
 		<section>
 			<h2 class="subtle">Headings</h2>
@@ -39,12 +45,14 @@
 			<h2 class="subtle">Paragraphs</h2>
 			<p>Lorem ipsum dolor sit amet, consemitctetur adipiscing elit. Aenean blandit magna sed velit iaculis tincidunt. Nulla nec pulvinar dui. Aenean sit amet ex ac elit consequat elementum. Fusce posuere non felis sit amet gravida. Phasellus bibendum dui vel bibendum posuere. Mauris nec dignissim elit. Etiam ultricies enim sed magna ornare hendrerit. Curabitur in euismod enim, sit amet fringilla leo. Integer consequat tellus efficitur pretium rutrum. In nibh tortor, feugiat sollicitudin aliquet in, vulputate vitae odio.</p>
 			<p>Nunc eget tristique lorem. Mauris maximus elementum arcu et tristique. Donec dui tortor, maximus quis ipsum eget, ultricies porttitor orci. Vestibulum non ante massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus tempor ante vitae ante consectetur, et facilisis turpis feugiat. Etiam ut sodales ipsum. Sed ultricies, magna ac consequat molestie, neque mauris feugiat libero, pretium bibendum tortor sapien id nisi.</p>
+			<h2 class="subtle">Horizontal Rule</h2>
+			<hr>
 			<h2 class="subtle">Links</h2>
 			<p><a href="#link">link</a></p>
 			<h2 class="subtle">Blockquote</h2>
 			<p><blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean blandit magna sed velit iaculis tincidunt. Nulla nec pulvinar dui. Aenean sit amet ex ac elit consequat elementum.<cite>Someone</cite></blockquote></p>
 			<h2 class="subtle">Code</h2>
-			<p><code>code goes here</code></p>
+			<p><code>&lt;element&gt;code goes here&lt;/element&gt;</code></p>
 			<h2 class="subtle">Pre</h2>
 			<p><pre>10 Something
 20 Something else
@@ -96,5 +104,14 @@
 		</section>
 	</div>
 </div>
+<script src="js/zepto.js"></script>
+<script>
+Zepto(function($){
+	$(document).on('click', '.invertMe', function(e){
+		e.preventDefault();
+		$('body').toggleClass('invert');
+	});
+});
+</script>
 </body>
 </html>
