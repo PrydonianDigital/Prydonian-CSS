@@ -10,18 +10,20 @@
 }
 nav {
 	width: 100%;
+	max-width: 80rem;
 	display: flex;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(1em, 1fr));
 	padding: var(--pm-large);
 	text-align: center;
+	margin: 0 auto;
 }
 
 .main {
 	grid-column: auto / span 12;
 }
 section {
-	padding: 0 0 var(--pm-xxlarge) 0;
+	padding: 0;
 	margin: 0 0 var(--pm-xxlarge) 0;
 	border-bottom: 1px solid var(--color-grey);
 }
@@ -30,7 +32,6 @@ section {
 }
 .header {
 	font-family: 'Montserrat';
-	color: #8C1717;
 }
 nav span {
 	width: auto;
@@ -50,6 +51,10 @@ nav button, nav [type="submit"], nav input, nav span, nav select, nav .button {
 	display: block;
 	padding: var(--pm-large);
 	font-size: var(--font-small);
+}
+nav button:active, nav [type="submit"]:active, nav input:active, nav span:active, nav select:active, nav .button:active {
+	font-size: var(--font-small);
+	padding: var(--pm-large);
 }
 nav input {
 	border-left-width: 0;
