@@ -862,7 +862,7 @@ input[type="range"]:focus::-ms-fill-upper {
 	transition: margin .25s;
 }
 .switch input:checked+label:before {
-	background-color: var(--color-fuchsia);
+	background-color: var(--color-olive);
 }
 .switch input.primary:checked+label:before {
 	background-color: var(--color-green);
