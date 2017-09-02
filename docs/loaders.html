@@ -10,25 +10,67 @@
 <body>
 
 	<nav>
-		<a href="index.html" class="button">Start</a>
-		<a href="forms.html" class="button">Forms</a>
-		<a href="messages.html" class="button">Messages</a>
-		<a href="badges.html" class="button">Badges</a>
-		<a href="tables.html" class="button">Tables</a>
-		<a href="loaders.html" class="button primary">Loaders</a>
+		<ul class="menu">
+			<li><a href="index.html">Start</a></li>
+			<li><a href="forms.html">Forms</a></li>
+			<li><a href="buttons.html">Buttons</a></li>
+			<li><a href="switches.html">Switches</a></li>
+			<li><a href="messages.html">Messages</a></li>
+			<li><a href="badges.html">Badges</a></li>
+			<li><a href="tables.html">Tables</a></li>
+			<li class="active"><a href="loaders.html">Loaders</a></li>
+			<li><a href="menus.html">Menus</a>
+		</ul>
 	</nav>
 <div class="container">
 	<div class="main">
 		<section class="header">
 			<h1>Prydonian CSS</h1>
+			<p><a class="button dark invertMe" href="#" id="invert">Invert</a></p>
 		</section>
 		<section>
 			<h2 class="subtle">Loaders</h2>
-				<div class="space">
+			<div class="space">
+				<div class="loader"></div>
+				<div class="loader medium"></div>
+				<div class="loader big"></div>
+			</div>
+			<div class="space">
+				<div class="loader primary"></div>
+				<div class="loader secondary"></div>
+				<div class="loader info"></div>
+				<div class="loader alert"></div>
+				<div class="loader attention"></div>
+				<div class="loader dark"></div>
+			</div>
+			<div class="space">
+				<br>
+				<p>Loaders in buttons</p>
+				<button>
 					<div class="loader"></div>
-				</div>
+				</button>
+				<button>
+					<div class="loader primary"></div>
+				</button>
+				<button>
+					<div class="loader secondary"></div>
+				</button>
+				<button>
+					<div class="loader info"></div>
+				</button>
+				<button>
+					<div class="loader alert"></div>
+				</button>
+				<button>
+					<div class="loader attention"></div>
+				</button>
+				<button>
+					<div class="loader dark"></div>
+				</button>
+			</div>
 		</section>
 		<section>
+			<h2 class="subtle">Progress Loaders</h2>
 			<div class="space">
 				<div class="progress">
 					<div class="progress-value loading" style="width:100%;">loading (default)</div>
@@ -53,5 +95,14 @@
 
 	</div>
 </div>
+<script src="js/zepto.js"></script>
+<script>
+Zepto(function($){
+	$(document).on('click', '.invertMe', function(e){
+		e.preventDefault();
+		$('body').toggleClass('invert');
+	});
+});
+</script>
 </body>
 </html>
