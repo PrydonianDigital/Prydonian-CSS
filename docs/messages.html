@@ -10,49 +10,68 @@
 <body>
 
 	<nav>
-		<a href="index.html" class="button">Start</a>
-		<a href="forms.html" class="button">Forms</a>
-		<a href="messages.html" class="button primary">Messages</a>
-		<a href="badges.html" class="button">Badges</a>
-		<a href="tables.html" class="button">Tables</a>
-		<a href="loaders.html" class="button">Loaders</a>
+		<ul class="menu">
+			<li><a href="index.html">Start</a></li>
+			<li><a href="forms.html">Forms</a></li>
+			<li><a href="buttons.html">Buttons</a></li>
+			<li><a href="switches.html">Switches</a></li>
+			<li class="active"><a href="messages.html">Messages</a></li>
+			<li><a href="badges.html">Badges</a></li>
+			<li><a href="tables.html">Tables</a></li>
+			<li><a href="loaders.html">Loaders</a></li>
+			<li><a href="menus.html">Menus</a>
+		</ul>
 	</nav>
 <div class="container">
 	<div class="main">
 		<section class="header">
 			<h1>Prydonian CSS</h1>
+			<p><a class="button dark invertMe" href="#" id="invert">Invert</a></p>
 		</section>
 		<section>
-			<h2 class="subtle">Messages</h2>
+			<h2 class="subtle">Messages &amp; Toast</h2>
 			<p>
 				<div class="message">
-					<i class="fa fa-exclamation-triangle"></i> This is a default message box with <a href="#link">link</a>
+					<i class="fa fa-thumbs-o-up"></i> This is a default message box - <a href="#link" data-toast="">open toast</a>
 				</div>
 				<div class="message primary">
-					<i class="fa fa-exclamation-triangle"></i> This is a primary message box with <a href="#link">link</a>
+					<i class="fa fa-cloud"></i> This is a primary message box - <a href="#link" data-toast="primary">open toast</a>
 				</div>
 				<div class="message secondary">
-					<i class="fa fa-exclamation-triangle"></i> This is a secondary message box with <a href="#link">link</a>
+					<i class="fa fa-cogs"></i> This is a secondary message box - <a href="#link" data-toast="secondary">open toast</a>
 				</div>
 				<div class="message info">
-					<i class="fa fa-exclamation-triangle"></i> This is an info message box with <a href="#link">link</a>
+					<i class="fa fa-info-circle"></i> This is an info message box - <a href="#link" data-toast="info">open toast</a>
 				</div>
 				<div class="message alert">
-					<i class="fa fa-exclamation-triangle"></i> This is an alert message box with <a href="#link">link</a>
-				</div>
-				<div class="message alert">
-					<i class="fa fa-exclamation-triangle"></i> This is an alert message box with <a href="#link">link</a>
+					<i class="fa fa-exclamation-triangle"></i> This is an alert message box - <a href="#link" data-toast="alert">open toast</a>
 				</div>
 				<div class="message attention">
-					<i class="fa fa-exclamation-triangle"></i> This is an attention message box with <a href="#link">link</a>
+					<i class="fa fa-exclamation"></i> This is an attention message box - <a href="#link" data-toast="attention">open toast</a>
 				</div>
 				<div class="message dark">
-					<i class="fa fa-exclamation-triangle"></i> This is a dark message box with <a href="#link">link</a>
+					<i class="fa fa-puzzle-piece"></i> This is a dark message box - <a href="#link" data-toast="dark">open toast</a>
 				</div>
 			</p>
 		</section>
-
-	</div>
+	<div class="toasts"></div>
 </div>
+<script src="js/zepto.js"></script>
+<script>
+Zepto(function($){
+	$(document).on('click', '.invertMe', function(e){
+		e.preventDefault();
+		$('body').toggleClass('invert');
+	});
+	$('a[data-toast]').on('click', function(e){
+		e.preventDefault();
+		var type = $(this).data('toast');
+		$('.toasts').append('<div class="toast '+type+'">This is a toast (pop-up) message<span class="close"><i class="fa fa-times" aria-hidden="true"></i></span></div>');
+	});
+	$('.toasts').on('click', '.close', function(){
+		$(this).parent().remove();
+	});
+});
+</script>
 </body>
 </html>
