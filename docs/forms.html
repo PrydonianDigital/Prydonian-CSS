@@ -10,23 +10,33 @@
 <body>
 
 	<nav>
-		<a href="index.html" class="button">Start</a>
-		<a href="forms.html" class="button primary">Forms</a>
-		<a href="messages.html" class="button">Messages</a>
-		<a href="badges.html" class="button">Badges</a>
-		<a href="tables.html" class="button">Tables</a>
-		<a href="loaders.html" class="button">Loaders</a>
+		<ul class="menu">
+			<li><a href="index.html">Start</a></li>
+			<li class="active"><a href="forms.html">Forms</a></li>
+			<li><a href="buttons.html">Buttons</a></li>
+			<li><a href="switches.html">Switches</a></li>
+			<li><a href="messages.html">Messages</a></li>
+			<li><a href="badges.html">Badges</a></li>
+			<li><a href="tables.html">Tables</a></li>
+			<li><a href="loaders.html">Loaders</a></li>
+			<li><a href="menus.html">Menus</a>
+		</ul>
 	</nav>
 <div class="container">
 	<div class="main">
 		<section class="header">
 			<h1>Prydonian CSS</h1>
+			<p><a class="button dark invertMe" href="#" id="invert">Invert</a></p>
 		</section>
 		<section>
 			<h2 class="subtle">Forms</h2>
 			<p>
 				<label for="input">Label</label>
 				<input type="text" id="input" placeholder="Placeholder" />
+			</p>
+			<p>
+				<label for="input1">Label</label>
+				<input type="text" id="input1" readonly placeholder="Read-only" />
 			</p>
 			<p>
 				<label for="select">Label</label>
@@ -37,38 +47,42 @@
 				</select>
 			</p>
 			<p>
+				<label for="check">Checkbox</label>
+				<input type="checkbox" id="check" name="check1" />
+				<input type="checkbox" id="check" name="check2" />
+			</p>
+			<p>
+				<label for="radio1">Radio</label>
+				<input type="radio" id="radio1" name="radio" />
+				<input type="radio" id="radio2" name="radio" />
+			</p>
+			<p>
+				<label for="search">Search</label>
+				<input type="search" id="search">
+			</p>
+			<p>
+				<label for="number">Number</label>
+				<input type="number" value="1" id="number">
+			</p>
+			<p>
+				<label for="colour">Colour</label>
+				<input type="color" value="#00FF00" id="colour">
+			</p>
+			<p>
+				<label for="date">Date</label>
+				<input type="date" id="date">
+			</p>
+			<p>
+				<label for="time">Time</label>
+				<input type="time" id="time">
+			</p>
+			<p>
 				<label for="input">Label</label>
 				<input type="text" class="medium" id="input" placeholder="Medium input" />
 			</p>
 			<p>
 				<label for="input">Label</label>
 				<input type="text" class="big" id="input" placeholder="Big input" />
-			</p>
-			<p>Regular buttons &amp; colours
-				<div class="space">
-					<button>Button</button> <button class="primary">Primary</button> <button class="secondary">Secondary</button> <button class="info">Info</button> <button class="alert">Alert</button> <button class="attention">Attention</button> <button class="dark">Dark</button>
-				</div>
-			</p>
-			<p>Hollow buttons &amp; colours
-				<div class="space">
-					<button class="hollow">Button</button> <button class="hollow primary">Primary</button> <button class="hollow secondary">Secondary</button> <button class="hollow info">Info</button> <button class="hollow alert">Alert</button> <button class="hollow attention">Attention</button> <button class="hollow dark">Dark</button>
-				</div>
-			</p>
-			<p>Sized buttons
-				<div>
-					<button class="small">Small</button> <button>Regular</button> <button class="medium">Medium</button> <button class="big">Big</button>
-				</div>
-			</p>
-			<p>Full-Width buttons
-				<div class="space">
-					<button class="full">Button</button>
-				</div>
-				<div class="space">
-					<button class="full medium">Medium button</button>
-				</div>
-				<div class="space">
-					<button class="full big">Big button</button>
-				</div>
 			</p>
 			<p>Progress
 				<div class="space">
@@ -105,7 +119,7 @@
 			</p>
 			<form>
 				<fieldset>
-					<legend>Form</legend>
+					<legend>Form Example</legend>
 					<div class="form-fields">
 						<label for="name">Name</label>
 						<input type="text" id="name" placeholder="Name" />
@@ -133,5 +147,14 @@
 		</section>
 	</div>
 </div>
+<script src="js/zepto.js"></script>
+<script>
+Zepto(function($){
+	$(document).on('click', '.invertMe', function(e){
+		e.preventDefault();
+		$('body').toggleClass('invert');
+	});
+});
+</script>
 </body>
 </html>
