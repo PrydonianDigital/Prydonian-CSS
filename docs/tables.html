@@ -10,17 +10,23 @@
 <body>
 
 	<nav>
-		<a href="index.html" class="button">Start</a>
-		<a href="forms.html" class="button">Forms</a>
-		<a href="messages.html" class="button">Messages</a>
-		<a href="badges.html" class="button">Badges</a>
-		<a href="tables.html" class="button primary">Tables</a>
-		<a href="loaders.html" class="button">Loaders</a>
+		<ul class="menu">
+			<li><a href="index.html">Start</a></li>
+			<li><a href="forms.html">Forms</a></li>
+			<li><a href="buttons.html">Buttons</a></li>
+			<li><a href="switches.html">Switches</a></li>
+			<li><a href="messages.html">Messages</a></li>
+			<li><a href="badges.html">Badges</a></li>
+			<li class="active"><a href="tables.html">Tables</a></li>
+			<li><a href="loaders.html">Loaders</a></li>
+			<li><a href="menus.html">Menus</a>
+		</ul>
 	</nav>
 <div class="container">
 	<div class="main">
 		<section class="header">
 			<h1>Prydonian CSS</h1>
+			<p><a class="button dark invertMe" href="#" id="invert">Invert</a></p>
 		</section>
 		<section>
 			<h2 class="subtle">Tables</h2>
@@ -168,5 +174,14 @@
 
 	</div>
 </div>
+<script src="js/zepto.js"></script>
+<script>
+Zepto(function($){
+	$(document).on('click', '.invertMe', function(e){
+		e.preventDefault();
+		$('body').toggleClass('invert');
+	});
+});
+</script>
 </body>
 </html>
