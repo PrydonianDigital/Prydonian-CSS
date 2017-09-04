@@ -1202,6 +1202,34 @@ table.hover tbody tr:hover td {
 .breadcrumbs ul li.active a {
 	color: var(--color-blue);
 }
+.card {
+	border: 1px solid var(--color-silver);
+	border-radius: var(--border-radius);
+	margin-bottom: var(--pm-large)
+}
+.card img {
+	max-width: 100%;
+	height: auto;
+}
+.card-title {
+	background-color: var(--color-silver);
+	padding: var(--pm-large) var(--pm-medium);
+	text-align: center;
+	font-weight: var(--weight-book);
+}
+.card-content {
+	padding: var(--pm-large) var(--pm-medium);
+}
+.card-content:last-child p {
+	margin-bottom: 0;
+}
+.card-actions {
+	border-top: 1px solid var(--color-silver);
+	padding: var(--pm-large) var(--pm-medium);
+	text-align: center;
+	font-weight: var(--weight-book);
+}
+
 hr {
 	border: none;
 	border-top: 1px solid var(--color-silver);
