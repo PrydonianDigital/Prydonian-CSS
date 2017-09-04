@@ -304,9 +304,10 @@ textarea {
 }
 
 input[readonly] {
-  opacity: 0.9;
-  background-color: #DDDDDD;
   cursor: not-allowed;
+  box-shadow: none !important;
+  background-color: #E8E8E8;
+  color: #111111;
 }
 
 input[type="color"] {
@@ -976,7 +977,7 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 
 .switch input:checked+label:before {
-  background-color: #F012BE;
+  background-color: #3D9970;
 }
 
 .switch input.primary:checked+label:before {
@@ -1011,9 +1012,10 @@ input[type="range"]:focus::-ms-fill-upper {
 input:disabled,
 [type="submit"]:disabled,
 button:disabled {
-  opacity: 0.5;
   cursor: not-allowed;
   box-shadow: none !important;
+  background-color: #E8E8E8;
+  color: #111111;
 }
 
 .progress-value.loading {
@@ -1340,6 +1342,45 @@ table.hover tbody tr:hover td {
 
 .menu li:hover > ul {
   display: block;
+}
+
+.breadcrumbs ul {
+  list-style: none;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+.breadcrumbs ul li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0 1.5rem 0 0;
+  display: inline-block;
+}
+
+.breadcrumbs ul li:after {
+  content: "/";
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.breadcrumbs ul li:last-child:after {
+  content: "";
+}
+
+.breadcrumbs ul li a {
+  position: relative;
+  display: block;
+  color: #666666;
+  padding: 0;
+  text-decoration: none;
+}
+
+.breadcrumbs ul li.active a {
+  color: #0074D9;
 }
 
 hr {

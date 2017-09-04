@@ -25,6 +25,7 @@
 			<li><a href="tables.html">Tables</a></li>
 			<li><a href="loaders.html">Loaders</a></li>
 			<li><a href="menus.html">Menus</a>
+			<li><a href="breadcrumbs.html">Breadcrumbs</a>
 		</ul>
 	</nav>
 <div class="container">
@@ -40,8 +41,12 @@
 				<input type="text" id="input" placeholder="Placeholder" />
 			</p>
 			<p>
-				<label for="input1">Label</label>
-				<input type="text" id="input1" readonly placeholder="Read-only" />
+				<label for="readonly">Read-only</label>
+				<input type="text" id="readonly" readonly placeholder="Read-only" value="Read-only" />
+			</p>
+			<p>
+				<label for="disabled">Disabled</label>
+				<input type="text" id="disabled" disabled placeholder="Disabled" value="Disabled" />
 			</p>
 			<p>
 				<label for="select">Label</label>
@@ -52,7 +57,7 @@
 				</select>
 			</p>
 			<p>
-				<label for="check">Checkbox</label>
+				<label for="check">Checkboxes</label>
 				<input type="checkbox" id="check" name="check1" />
 				<input type="checkbox" id="check" name="check2" />
 			</p>
