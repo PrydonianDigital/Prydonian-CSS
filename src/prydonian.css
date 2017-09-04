@@ -1208,6 +1208,7 @@ table.hover tbody tr:hover td {
 	margin-bottom: var(--pm-large)
 }
 .card img {
+	width: 100%;
 	max-width: 100%;
 	height: auto;
 }

@@ -1390,6 +1390,7 @@ table.hover tbody tr:hover td {
 }
 
 .card img {
+  width: 100%;
   max-width: 100%;
   height: auto;
 }
