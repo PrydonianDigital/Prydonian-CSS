@@ -247,6 +247,59 @@ pre {
 .text-justify {
 	text-align: justify;
 }
+.card {
+	border: 1px solid var(--color-silver);
+	border-radius: var(--border-radius);
+	margin-bottom: var(--pm-large)
+}
+.card img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+.card-title {
+	background-color: var(--color-silver);
+	padding: var(--pm-large);
+	text-align: center;
+	font-weight: var(--weight-book);
+}
+.card-content {
+	padding: var(--pm-large);
+}
+.card-content:last-child p {
+	margin-bottom: 0;
+}
+.card-actions {
+	border-top: 1px solid var(--color-silver);
+	padding: var(--pm-large);
+	text-align: center;
+	font-weight: var(--weight-book);
+}
+.media-object {
+	display: flex;
+	margin-bottom: var(--pm-large);
+}
+.media-section {
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+	-webkit-flex: 0 1 auto;
+	-moz-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+	padding: var(--pm-medium);
+}
+.media-section img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+.media-section:first-child {
+	padding-right: var(--pm-large);
+}
+.media-object.border {
+	border: 1px solid var(--color-silver);
+	border-radius: var(--border-radius);
+}
 fieldset {
 	border: none;
 	padding: var(--pm-zero);
@@ -611,10 +664,15 @@ button:active, [type="submit"]:active, .button:active {
 	color: var(--color-grey);
 	font-weight: var(--weight-book);
 }
-.group {
+.group, .label-group {
 	width: 100%;
 	display: flex;
 	margin: 0 0 var(--pm-large) 0;
+}
+.label-group {
+	display: inline;
+	margin-right: var(--pm-small);
+	font-size: var(--font-small);
 }
 .group span {
 	width: auto;
@@ -628,6 +686,15 @@ button:active, [type="submit"]:active, .button:active {
 	border-radius: var(--border-radius);
 	color: var(--color-black);
 	margin: 0 0 var(--pm-small) 0;
+}
+.label-group span {
+	padding:  var(--pm-small) calc(var(--pm-medium) * 1.75);
+}
+.label-group span:first-child {
+	border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+.label-group span:last-child {
+	border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 .group button, .group [type="submit"], .group input, .group span, .group select, .group .button {
 	border-radius: var(--pm-zero);
@@ -1202,35 +1269,6 @@ table.hover tbody tr:hover td {
 .breadcrumbs ul li.active a {
 	color: var(--color-blue);
 }
-.card {
-	border: 1px solid var(--color-silver);
-	border-radius: var(--border-radius);
-	margin-bottom: var(--pm-large)
-}
-.card img {
-	width: 100%;
-	max-width: 100%;
-	height: auto;
-}
-.card-title {
-	background-color: var(--color-silver);
-	padding: var(--pm-large) var(--pm-medium);
-	text-align: center;
-	font-weight: var(--weight-book);
-}
-.card-content {
-	padding: var(--pm-large) var(--pm-medium);
-}
-.card-content:last-child p {
-	margin-bottom: 0;
-}
-.card-actions {
-	border-top: 1px solid var(--color-silver);
-	padding: var(--pm-large) var(--pm-medium);
-	text-align: center;
-	font-weight: var(--weight-book);
-}
-
 hr {
 	border: none;
 	border-top: 1px solid var(--color-silver);

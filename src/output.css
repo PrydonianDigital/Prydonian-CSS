@@ -227,6 +227,70 @@ pre {
   text-align: justify;
 }
 
+.card {
+  border: 1px solid #DDDDDD;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.card-title {
+  background-color: #DDDDDD;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content:last-child p {
+  margin-bottom: 0;
+}
+
+.card-actions {
+  border-top: 1px solid #DDDDDD;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.media-object {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.media-section {
+  -webkit-box-flex: 0;
+  -moz-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  padding: .5rem;
+}
+
+.media-section img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.media-section:first-child {
+  padding-right: 1rem;
+}
+
+.media-object.border {
+  border: 1px solid #DDDDDD;
+  border-radius: 0.25rem;
+}
+
 fieldset {
   border: none;
   padding: 0;
@@ -676,12 +740,19 @@ button:active,
   font-weight: 500;
 }
 
-.group {
+.group,
+.label-group {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 0 1rem 0;
+}
+
+.label-group {
+  display: inline;
+  margin-right: .25rem;
+  font-size: 1.2rem;
 }
 
 .group span {
@@ -696,6 +767,18 @@ button:active,
   border-radius: 0.25rem;
   color: #111111;
   margin: 0 0 .25rem 0;
+}
+
+.label-group span {
+  padding: .25rem 0.875rem;
+}
+
+.label-group span:first-child {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.label-group span:last-child {
+  border-radius: 0 0.25rem 0.25rem 0;
 }
 
 .group button,
@@ -1381,40 +1464,6 @@ table.hover tbody tr:hover td {
 
 .breadcrumbs ul li.active a {
   color: #0074D9;
-}
-
-.card {
-  border: 1px solid #DDDDDD;
-  border-radius: 0.25rem;
-  margin-bottom: 1rem;
-}
-
-.card img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
-.card-title {
-  background-color: #DDDDDD;
-  padding: 1rem .5rem;
-  text-align: center;
-  font-weight: 500;
-}
-
-.card-content {
-  padding: 1rem .5rem;
-}
-
-.card-content:last-child p {
-  margin-bottom: 0;
-}
-
-.card-actions {
-  border-top: 1px solid #DDDDDD;
-  padding: 1rem .5rem;
-  text-align: center;
-  font-weight: 500;
 }
 
 hr {
