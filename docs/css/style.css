@@ -33,38 +33,3 @@ section {
 .header {
 	font-family: 'Montserrat';
 }
-nav span {
-	width: auto;
-	font-family: var(--button-font);
-	font-size: var(--button-size);
-	line-height: inherit;
-	font-weight: var(--button-weight);
-	background: var(--color-silver);
-	border: none;
-	padding: var(--pm-medium) var(--pm-large) 0 var(--pm-large);
-	border-radius: var(--border-radius);
-	color: var(--color-black);
-	margin: 0 0 var(--pm-small) 0;
-}
-nav button, nav [type="submit"], nav input, nav span, nav select, nav .button {
-	border-radius: var(--pm-zero);
-	display: block;
-	padding: var(--pm-large);
-	font-size: var(--font-small);
-}
-nav button:active, nav [type="submit"]:active, nav input:active, nav span:active, nav select:active, nav .button:active {
-	font-size: var(--font-small);
-	padding: var(--pm-large);
-}
-nav input {
-	border-left-width: 0;
-}
-nav input:first-child, nav .button:first-child {
-	border-left-width: 1px;
-}
-nav button:first-child, nav [type="submit"]:first-child, nav input:first-child, nav select:first-child, nav span:first-child, nav .button:first-child {
-	border-radius: var(--border-radius) 0 0 var(--border-radius);
-}
-nav button:last-child, nav [type="submit"]:last-child, nav input:last-child, nav select:last-child, nav span:last-child, nav .button:last-child {
-	border-radius: 0 var(--border-radius) var(--border-radius) 0;
-}
