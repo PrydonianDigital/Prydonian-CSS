@@ -259,7 +259,7 @@ pre {
 }
 .card-title {
 	background-color: var(--color-silver);
-	padding: var(--pm-large);
+	padding: var(--pm-xxlarge) var(--pm-large);
 	text-align: center;
 	font-weight: var(--weight-book);
 }
@@ -271,7 +271,7 @@ pre {
 }
 .card-actions {
 	border-top: 1px solid var(--color-silver);
-	padding: var(--pm-large);
+	padding: var(--pm-xxlarge) var(--pm-large);
 	text-align: center;
 	font-weight: var(--weight-book);
 }
@@ -479,6 +479,9 @@ button:active, [type="submit"]:active, .button:active {
 	border-radius: var(--border-radius);
 	margin-bottom: var(--pm-large);
 	position: relative;
+}
+.message {
+	border-left: 4px solid rgba(0,0,0,0.25)
 }
 .invert .message, .invert .toast {
 	color: var(--color-black);
@@ -712,6 +715,10 @@ button:active, [type="submit"]:active, .button:active {
 .group button:last-child, .group [type="submit"]:last-child, .group input:last-child, .group select:last-child, .group span:last-child, .group .button:last-child {
 	border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
+.card-actions .group {
+	justify-content: center;
+}
+
 .full {
 	width: 100%;
 }

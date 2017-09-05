@@ -241,7 +241,7 @@ pre {
 
 .card-title {
   background-color: #DDDDDD;
-  padding: 1rem;
+  padding: 2rem 1rem;
   text-align: center;
   font-weight: 500;
 }
@@ -256,7 +256,7 @@ pre {
 
 .card-actions {
   border-top: 1px solid #DDDDDD;
-  padding: 1rem;
+  padding: 2rem 1rem;
   text-align: center;
   font-weight: 500;
 }
@@ -504,6 +504,10 @@ button:active,
   border-radius: 0.25rem;
   margin-bottom: 1rem;
   position: relative;
+}
+
+.message {
+  border-left: 4px solid rgba(0,0,0,0.25);
 }
 
 .invert .message,
@@ -816,6 +820,12 @@ button:active,
 .group span:last-child,
 .group .button:last-child {
   border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.card-actions .group {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .full {
