@@ -49,9 +49,9 @@
 	--button-weight: inherit;
 	--button-size: var(--font-regular);
 	--progress-shadow: 1px 0 1px rgba(0,0,0,0.25);
-	--button-shadow: inset 0 2px 0 rgba(255, 255, 255, .25), inset 0 -2px 0 rgba(0, 0, 0, .25);
+	--button-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), inset 0 -1px 0 rgba(0, 0, 0, .25);
 	--button-shadow-hover: inset 0 5rem 5rem rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .25);
-	--button-shadow-active: inset 0 2px 5rem rgba(0, 0, 0, .15), inset 0 2px 0 rgba(0, 0, 0, .25);
+	--button-shadow-active: inset 0 1px 5rem rgba(0, 0, 0, .15), inset 0 1px 0 rgba(0, 0, 0, .25);
 	--button-shadow-hollow: inset 0 0 1px rgba(0, 0, 0, .75);
 	--button-shadow-hollow-invert: inset 0 0 2px rgba(255,255,255, .75), inset 0 0 2px rgba(255,255,255, .5);
 
@@ -65,7 +65,7 @@
 	--code-spacing-y: calc(var(--font-regular) * .2);
 
 	/* Toast */
-	--toast-shadow: 2px 2px 2px  rgba(0, 0, 0, 0.5);
+	--toast-shadow: 2px 2px 2px	rgba(0, 0, 0, 0.5);
 
 	/* Paddings/Margins */
 	--pm-zero: 0;
@@ -80,6 +80,7 @@
 	/* Border Radii */
 	--border-radius: 0.25rem;
 	--border-radius-big: 2rem;
+	--border-radius-round: 50%;
 
 }
 *, *:before, *:after {
@@ -257,6 +258,20 @@ pre {
 	max-width: 100%;
 	height: auto;
 }
+.card-avatar {
+	max-width: 64px;
+	height: auto;
+	border-radius: var(--border-radius-round);
+	position: relative;
+	margin-top: -32px;
+	margin-right: 1rem;
+	overflow: hidden;
+	float: right;
+	border: 1px solid var(--color-silver);
+}
+.card-avatar img {
+	border-radius: var(--border-radius-round);
+}
 .card-title {
 	background-color: var(--color-silver);
 	padding: var(--pm-xxlarge) var(--pm-large);
@@ -274,6 +289,9 @@ pre {
 	padding: var(--pm-xxlarge) var(--pm-large);
 	text-align: center;
 	font-weight: var(--weight-book);
+}
+.card-actions .group {
+	margin-bottom: 0 !important;
 }
 .media-object {
 	display: flex;
@@ -313,6 +331,48 @@ fieldset legend {
 .form-fields {
 	margin: 0 0 var(--pm-medium) 0;
 }
+.gauge {
+	display:inline-block;
+	position:relative;
+	width: calc(var(--pm-xxlarge) * 5);
+	height: calc(var(--pm-xxxlarge) * 2);
+	overflow: hidden;
+	margin: var(--pm-xxlarge);
+}
+
+.gauge:before, .gauge:after, .meter {
+	position: absolute;
+	display: block;
+	content: "";
+}
+
+.gauge:before, .meter {
+	width: calc(var(--pm-xxlarge) * 5);
+	height: calc(var(--pm-xxxlarge) * 2);
+}
+.gauge:before {
+	border-radius: 5rem 5rem 0 0;
+	background: var(--color-silver);
+}
+
+.gauge:after {
+	position: absolute;
+	bottom: 0;
+	left: var(--pm-xxxlarge);
+	width:calc(var(--pm-xxxlarge) * 2);
+	height: var(--pm-xxxlarge);
+	background: var(--color-white);
+	border-radius: 2.5rem 2.5rem 0 0;
+}
+
+.meter {
+	top: 100%;
+	transition: 1.5s;
+	transform-origin: center top;
+	border-radius: 0 0 6rem 6rem;
+	background: var(--color-blue);
+	transition: all 0.5s ease-in-out;
+}
 .progress {
 	width: 100%;
 	margin: 0 auto;
@@ -334,6 +394,9 @@ fieldset legend {
 }
 .progress-value.dark {
 	color: var(--color-white);
+}
+.invert .progress {
+	background: var(--color-dark);
 }
 label {
 	display: inline-block;
@@ -691,7 +754,7 @@ button:active, [type="submit"]:active, .button:active {
 	margin: 0 0 var(--pm-small) 0;
 }
 .label-group span {
-	padding:  var(--pm-small) calc(var(--pm-medium) * 1.75);
+	padding:	var(--pm-small) calc(var(--pm-medium) * 1.75);
 }
 .label-group span:first-child {
 	border-radius: var(--border-radius) 0 0 var(--border-radius);
@@ -1169,7 +1232,7 @@ table.hover tbody tr:hover td {
 	padding: 0
 }
 .menu li {
-  position: relative;
+	position: relative;
 }
 
 .menu ul {
